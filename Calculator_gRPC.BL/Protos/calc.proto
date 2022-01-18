@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "Calculator_gRPC.BL";
+
+package calc;
+
+service Calculator {
+  rpc Calculate (CalcRequest) returns (CalcReply);
+}
+
+message CalcRequest {
+  string jsonData = 1;
+}
+
+message CalcReply {
+  string jsonData = 1;
+}
